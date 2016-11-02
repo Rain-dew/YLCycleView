@@ -9,7 +9,7 @@ Swift无限轮播
         view.addSubview(cycleView)
   ```
   你可以在把本地图片名称直接放进数组里，也可以放一个URL
-  为了方便网络图片，我做了这样一个处理，但是同时我需要麻烦你在项目中引入[Kingfisher]: https://github.com/onevcat/Kingfisher 这个三方
+  为了方便网络图片，我做了这样一个处理，但是同时我需要麻烦你在项目中引入[Kingfisher](https://github.com/onevcat/Kingfisher) 这个三方
 ###如果你想获取点击事件请设置代理并且遵守它！最后实现代理方法。如果你不需要，忽略它。
   ```Swift
      cycleView.delegate = self;
@@ -26,4 +26,4 @@ Swift无限轮播
  self.automaticallyAdjustsScrollViewInsets = false
 ```
 ##效果图
-[image]: https://github.com/Rain-dew/YLCycleView/blob/master/YLCycleViewDemo/YLCycleViewDemo/%E3%80%82.gif
+![image](https://github.com/Rain-dew/YLCycleView/blob/master/YLCycleViewDemo/YLCycleViewDemo/%E3%80%82.gif)
