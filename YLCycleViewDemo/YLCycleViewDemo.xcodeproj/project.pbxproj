@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32C9ED4A9DF13D1B00E72DA3 /* Pods_YLCycleViewDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E11EE562A42772DF330A98 /* Pods_YLCycleViewDemo.framework */; };
 		4659E78A1DC89DDB004B66EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4659E7891DC89DDB004B66EF /* AppDelegate.swift */; };
 		4659E78C1DC89DDB004B66EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4659E78B1DC89DDB004B66EF /* ViewController.swift */; };
 		4659E78F1DC89DDB004B66EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4659E78D1DC89DDB004B66EF /* Main.storyboard */; };
@@ -19,9 +20,12 @@
 		4659E7A41DC89E00004B66EF /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 4659E7A01DC89E00004B66EF /* 4.png */; };
 		4659E7A81DC89E26004B66EF /* YLCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4659E7A61DC89E26004B66EF /* YLCycleCell.swift */; };
 		4659E7A91DC89E26004B66EF /* YLCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4659E7A71DC89E26004B66EF /* YLCycleView.swift */; };
+		46954A411DC97474003123F0 /* ScondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46954A401DC97474003123F0 /* ScondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		274AF85EFDE6442DDE306756 /* Pods-YLCycleViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YLCycleViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YLCycleViewDemo/Pods-YLCycleViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		33E11EE562A42772DF330A98 /* Pods_YLCycleViewDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YLCycleViewDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4659E7861DC89DDB004B66EF /* YLCycleViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YLCycleViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4659E7891DC89DDB004B66EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4659E78B1DC89DDB004B66EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +40,8 @@
 		4659E7A01DC89E00004B66EF /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
 		4659E7A61DC89E26004B66EF /* YLCycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YLCycleCell.swift; sourceTree = "<group>"; };
 		4659E7A71DC89E26004B66EF /* YLCycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YLCycleView.swift; sourceTree = "<group>"; };
+		46954A401DC97474003123F0 /* ScondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScondViewController.swift; sourceTree = "<group>"; };
+		BFE26403276CAC017579FE68 /* Pods-YLCycleViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YLCycleViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-YLCycleViewDemo/Pods-YLCycleViewDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32C9ED4A9DF13D1B00E72DA3 /* Pods_YLCycleViewDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +61,8 @@
 			children = (
 				4659E7881DC89DDB004B66EF /* YLCycleViewDemo */,
 				4659E7871DC89DDB004B66EF /* Products */,
+				C97E728CE391DA773EC82AD2 /* Pods */,
+				FC4482324288AC8AE99B8A32 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +79,7 @@
 			children = (
 				4659E7891DC89DDB004B66EF /* AppDelegate.swift */,
 				4659E78B1DC89DDB004B66EF /* ViewController.swift */,
+				46954A401DC97474003123F0 /* ScondViewController.swift */,
 				4659E7A51DC89E26004B66EF /* YLCycleView */,
 				4659E78D1DC89DDB004B66EF /* Main.storyboard */,
 				4659E79B1DC89DEF004B66EF /* 。.gif */,
@@ -93,6 +103,23 @@
 			path = YLCycleView;
 			sourceTree = "<group>";
 		};
+		C97E728CE391DA773EC82AD2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				274AF85EFDE6442DDE306756 /* Pods-YLCycleViewDemo.debug.xcconfig */,
+				BFE26403276CAC017579FE68 /* Pods-YLCycleViewDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FC4482324288AC8AE99B8A32 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33E11EE562A42772DF330A98 /* Pods_YLCycleViewDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -100,9 +127,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4659E7981DC89DDB004B66EF /* Build configuration list for PBXNativeTarget "YLCycleViewDemo" */;
 			buildPhases = (
+				B43CB0F615A6A92F05C09928 /* 📦 Check Pods Manifest.lock */,
 				4659E7821DC89DDB004B66EF /* Sources */,
 				4659E7831DC89DDB004B66EF /* Frameworks */,
 				4659E7841DC89DDB004B66EF /* Resources */,
+				C72B13AA5D1C8BC05603FDC9 /* 📦 Embed Pods Frameworks */,
+				510CDADFEDC5A6B419DF55E4 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,6 +156,7 @@
 					4659E7851DC89DDB004B66EF = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = EFQPYM2JJ7;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -166,12 +197,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		510CDADFEDC5A6B419DF55E4 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YLCycleViewDemo/Pods-YLCycleViewDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B43CB0F615A6A92F05C09928 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C72B13AA5D1C8BC05603FDC9 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YLCycleViewDemo/Pods-YLCycleViewDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4659E7821DC89DDB004B66EF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4659E7A91DC89E26004B66EF /* YLCycleView.swift in Sources */,
+				46954A411DC97474003123F0 /* ScondViewController.swift in Sources */,
 				4659E7A81DC89E26004B66EF /* YLCycleCell.swift in Sources */,
 				4659E78C1DC89DDB004B66EF /* ViewController.swift in Sources */,
 				4659E78A1DC89DDB004B66EF /* AppDelegate.swift in Sources */,
@@ -295,6 +375,7 @@
 		};
 		4659E7991DC89DDB004B66EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 274AF85EFDE6442DDE306756 /* Pods-YLCycleViewDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EFQPYM2JJ7;
@@ -308,6 +389,7 @@
 		};
 		4659E79A1DC89DDB004B66EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFE26403276CAC017579FE68 /* Pods-YLCycleViewDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EFQPYM2JJ7;
@@ -338,6 +420,7 @@
 				4659E79A1DC89DDB004B66EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

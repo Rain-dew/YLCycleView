@@ -19,10 +19,10 @@ import UIKit
 class YLCycleCell: UICollectionViewCell {
 
     //声明属性
-    var dataSource : [[String]]!
-    var iconImageView : UIImageView!
-    var titleLabel : UILabel?
-    var bottomView : UIView!
+//    var dataSource : [[String]]!
+    lazy var iconImageView = UIImageView()
+    lazy var titleLabel = UILabel()
+    lazy var bottomView = UIView()
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -34,25 +34,26 @@ class YLCycleCell: UICollectionViewCell {
     override func layoutSubviews() {
         setupUI()
     }
+   
 }
 extension YLCycleCell {
 
     fileprivate func setupUI() {
 
-        iconImageView = UIImageView(frame: self.bounds)
-        bottomView  = UIView(frame: CGRect(x: 0, y: iconImageView.bounds.height - 30, width: iconImageView.bounds.width, height: 30))
-        titleLabel = UILabel(frame: CGRect(x: 10, y: iconImageView.bounds.height - 25, width: iconImageView.bounds.width / 2, height: 20))
+        iconImageView.frame = self.bounds
+        bottomView.frame = CGRect(x: 0, y: iconImageView.bounds.height - 30, width: iconImageView.bounds.width, height: 30)
+        titleLabel.frame = CGRect(x: 10, y: iconImageView.bounds.height - 25, width: iconImageView.bounds.width / 2, height: 20)
 
         //设置属性
         bottomView.backgroundColor = .black
         bottomView.alpha = 0.3
-        titleLabel?.textAlignment = .left
-        titleLabel?.textColor = .white
-        titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        titleLabel.textAlignment = .left
+        titleLabel.textColor = .white
+        titleLabel.font = UIFont.systemFont(ofSize: 14)
 
         contentView.addSubview(iconImageView)
         contentView.addSubview(bottomView)
-        contentView.addSubview(titleLabel!)
+        contentView.addSubview(titleLabel)
 
     }
 
