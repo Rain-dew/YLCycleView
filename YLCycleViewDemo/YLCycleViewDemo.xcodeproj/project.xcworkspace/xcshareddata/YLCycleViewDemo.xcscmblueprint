@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "B56E904FBC4BA5920298DA1FB3DEC65ED5D1F70D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D2C19C2B332AEC90B1784446B45C4C8316964C70" : 9223372036854775807,
+    "B56E904FBC4BA5920298DA1FB3DEC65ED5D1F70D" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "DF989D37-85B6-4A86-8437-AD4EC9653F95",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D2C19C2B332AEC90B1784446B45C4C8316964C70" : "",
+    "B56E904FBC4BA5920298DA1FB3DEC65ED5D1F70D" : "YLCycleView\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "YLCycleViewDemo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "YLCycleViewDemo\/YLCycleViewDemo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Rain-dew\/YLCycleView.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B56E904FBC4BA5920298DA1FB3DEC65ED5D1F70D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Rain-dew\/YLCycleView.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D2C19C2B332AEC90B1784446B45C4C8316964C70"
+    }
+  ]
+}

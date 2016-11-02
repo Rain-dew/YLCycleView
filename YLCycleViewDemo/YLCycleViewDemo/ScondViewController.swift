@@ -21,7 +21,7 @@ class ScondViewController: UIViewController,YLCycleViewDelegate {
         let cycleView = YLCycleView(frame: CGRect(x: 0, y: 100, width: self.view.bounds.width, height: 150), images: images, titles: titles)
         cycleView.delegate = self;
         view.addSubview(cycleView)
-        
+
     }
 
     func  clickedCycleView(_ cycleView : YLCycleView, selectedIndex index: Int) {
