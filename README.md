@@ -1,7 +1,8 @@
 # YLCycleView
 Swift无限轮播
 ##如何使用？
-  ###把<font color=#0099ff size=14 face="黑体">YLCycleView</font>文件夹拖入你的项目
+####Demo运行会报错。请你务必对demo进行 pod install
+###把<font color=#0099ff size=14 face="黑体">YLCycleView</font>文件夹拖入你的项目
   ```Swift
         let images = ["http://c.hiphotos.baidu.com/image/pic/item/b58f8c5494eef01f50d40bbee5fe9925bd317d8c.jpg", "1", "2", "3", "4"]
         let titles = ["Raindew","无限轮播", "QQ群：511860085", "欢迎加入", "帅的人已经Star"]
