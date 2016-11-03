@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		32C9ED4A9DF13D1B00E72DA3 /* Pods_YLCycleViewDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E11EE562A42772DF330A98 /* Pods_YLCycleViewDemo.framework */; };
+		461D2FE91DCACA67007116C4 /* 效果.gif in Resources */ = {isa = PBXBuildFile; fileRef = 461D2FE81DCACA67007116C4 /* 效果.gif */; };
 		4659E78A1DC89DDB004B66EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4659E7891DC89DDB004B66EF /* AppDelegate.swift */; };
 		4659E78C1DC89DDB004B66EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4659E78B1DC89DDB004B66EF /* ViewController.swift */; };
 		4659E78F1DC89DDB004B66EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4659E78D1DC89DDB004B66EF /* Main.storyboard */; };
 		4659E7911DC89DDB004B66EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4659E7901DC89DDB004B66EF /* Assets.xcassets */; };
 		4659E7941DC89DDB004B66EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4659E7921DC89DDB004B66EF /* LaunchScreen.storyboard */; };
-		4659E79C1DC89DEF004B66EF /* 。.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4659E79B1DC89DEF004B66EF /* 。.gif */; };
 		4659E7A11DC89E00004B66EF /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4659E79D1DC89E00004B66EF /* 1.png */; };
 		4659E7A21DC89E00004B66EF /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4659E79E1DC89E00004B66EF /* 2.png */; };
 		4659E7A31DC89E00004B66EF /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4659E79F1DC89E00004B66EF /* 3.png */; };
@@ -26,6 +26,7 @@
 /* Begin PBXFileReference section */
 		274AF85EFDE6442DDE306756 /* Pods-YLCycleViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YLCycleViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YLCycleViewDemo/Pods-YLCycleViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		33E11EE562A42772DF330A98 /* Pods_YLCycleViewDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YLCycleViewDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		461D2FE81DCACA67007116C4 /* 效果.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "效果.gif"; sourceTree = "<group>"; };
 		4659E7861DC89DDB004B66EF /* YLCycleViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YLCycleViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4659E7891DC89DDB004B66EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4659E78B1DC89DDB004B66EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,7 +34,6 @@
 		4659E7901DC89DDB004B66EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4659E7931DC89DDB004B66EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4659E7951DC89DDB004B66EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4659E79B1DC89DEF004B66EF /* 。.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "。.gif"; sourceTree = "<group>"; };
 		4659E79D1DC89E00004B66EF /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		4659E79E1DC89E00004B66EF /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		4659E79F1DC89E00004B66EF /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
@@ -82,11 +82,11 @@
 				46954A401DC97474003123F0 /* ScondViewController.swift */,
 				4659E7A51DC89E26004B66EF /* YLCycleView */,
 				4659E78D1DC89DDB004B66EF /* Main.storyboard */,
-				4659E79B1DC89DEF004B66EF /* 。.gif */,
 				4659E79D1DC89E00004B66EF /* 1.png */,
 				4659E79E1DC89E00004B66EF /* 2.png */,
 				4659E79F1DC89E00004B66EF /* 3.png */,
 				4659E7A01DC89E00004B66EF /* 4.png */,
+				461D2FE81DCACA67007116C4 /* 效果.gif */,
 				4659E7901DC89DDB004B66EF /* Assets.xcassets */,
 				4659E7921DC89DDB004B66EF /* LaunchScreen.storyboard */,
 				4659E7951DC89DDB004B66EF /* Info.plist */,
@@ -189,8 +189,8 @@
 				4659E7911DC89DDB004B66EF /* Assets.xcassets in Resources */,
 				4659E78F1DC89DDB004B66EF /* Main.storyboard in Resources */,
 				4659E7A41DC89E00004B66EF /* 4.png in Resources */,
-				4659E79C1DC89DEF004B66EF /* 。.gif in Resources */,
 				4659E7A31DC89E00004B66EF /* 3.png in Resources */,
+				461D2FE91DCACA67007116C4 /* 效果.gif in Resources */,
 				4659E7A11DC89E00004B66EF /* 1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
