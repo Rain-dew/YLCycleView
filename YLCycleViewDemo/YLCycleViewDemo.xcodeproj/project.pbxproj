@@ -20,7 +20,11 @@
 		4659E7A41DC89E00004B66EF /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 4659E7A01DC89E00004B66EF /* 4.png */; };
 		4659E7A81DC89E26004B66EF /* YLCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4659E7A61DC89E26004B66EF /* YLCycleCell.swift */; };
 		4659E7A91DC89E26004B66EF /* YLCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4659E7A71DC89E26004B66EF /* YLCycleView.swift */; };
-		46954A411DC97474003123F0 /* ScondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46954A401DC97474003123F0 /* ScondViewController.swift */; };
+		46B58B8B1DCC3D0000EE3080 /* singer1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 46B58B881DCC3D0000EE3080 /* singer1.gif */; };
+		46B58B8C1DCC3D0000EE3080 /* singer2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 46B58B891DCC3D0000EE3080 /* singer2.gif */; };
+		46B58B8D1DCC3D0000EE3080 /* up.gif in Resources */ = {isa = PBXBuildFile; fileRef = 46B58B8A1DCC3D0000EE3080 /* up.gif */; };
+		46B58B8F1DCC3D0900EE3080 /* YLSinglerowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B58B8E1DCC3D0900EE3080 /* YLSinglerowView.swift */; };
+		46B58B911DCC3D2100EE3080 /* ScondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B58B901DCC3D2100EE3080 /* ScondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +44,11 @@
 		4659E7A01DC89E00004B66EF /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
 		4659E7A61DC89E26004B66EF /* YLCycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YLCycleCell.swift; sourceTree = "<group>"; };
 		4659E7A71DC89E26004B66EF /* YLCycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YLCycleView.swift; sourceTree = "<group>"; };
-		46954A401DC97474003123F0 /* ScondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScondViewController.swift; sourceTree = "<group>"; };
+		46B58B881DCC3D0000EE3080 /* singer1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = singer1.gif; sourceTree = "<group>"; };
+		46B58B891DCC3D0000EE3080 /* singer2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = singer2.gif; sourceTree = "<group>"; };
+		46B58B8A1DCC3D0000EE3080 /* up.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = up.gif; sourceTree = "<group>"; };
+		46B58B8E1DCC3D0900EE3080 /* YLSinglerowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YLSinglerowView.swift; sourceTree = "<group>"; };
+		46B58B901DCC3D2100EE3080 /* ScondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScondViewController.swift; sourceTree = "<group>"; };
 		BFE26403276CAC017579FE68 /* Pods-YLCycleViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YLCycleViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-YLCycleViewDemo/Pods-YLCycleViewDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,13 +87,16 @@
 			children = (
 				4659E7891DC89DDB004B66EF /* AppDelegate.swift */,
 				4659E78B1DC89DDB004B66EF /* ViewController.swift */,
-				46954A401DC97474003123F0 /* ScondViewController.swift */,
+				46B58B901DCC3D2100EE3080 /* ScondViewController.swift */,
 				4659E7A51DC89E26004B66EF /* YLCycleView */,
 				4659E78D1DC89DDB004B66EF /* Main.storyboard */,
 				4659E79D1DC89E00004B66EF /* 1.png */,
 				4659E79E1DC89E00004B66EF /* 2.png */,
 				4659E79F1DC89E00004B66EF /* 3.png */,
 				4659E7A01DC89E00004B66EF /* 4.png */,
+				46B58B881DCC3D0000EE3080 /* singer1.gif */,
+				46B58B891DCC3D0000EE3080 /* singer2.gif */,
+				46B58B8A1DCC3D0000EE3080 /* up.gif */,
 				461D2FE81DCACA67007116C4 /* 效果.gif */,
 				4659E7901DC89DDB004B66EF /* Assets.xcassets */,
 				4659E7921DC89DDB004B66EF /* LaunchScreen.storyboard */,
@@ -99,6 +110,7 @@
 			children = (
 				4659E7A61DC89E26004B66EF /* YLCycleCell.swift */,
 				4659E7A71DC89E26004B66EF /* YLCycleView.swift */,
+				46B58B8E1DCC3D0900EE3080 /* YLSinglerowView.swift */,
 			);
 			path = YLCycleView;
 			sourceTree = "<group>";
@@ -187,8 +199,11 @@
 				4659E7A21DC89E00004B66EF /* 2.png in Resources */,
 				4659E7941DC89DDB004B66EF /* LaunchScreen.storyboard in Resources */,
 				4659E7911DC89DDB004B66EF /* Assets.xcassets in Resources */,
+				46B58B8C1DCC3D0000EE3080 /* singer2.gif in Resources */,
+				46B58B8B1DCC3D0000EE3080 /* singer1.gif in Resources */,
 				4659E78F1DC89DDB004B66EF /* Main.storyboard in Resources */,
 				4659E7A41DC89E00004B66EF /* 4.png in Resources */,
+				46B58B8D1DCC3D0000EE3080 /* up.gif in Resources */,
 				4659E7A31DC89E00004B66EF /* 3.png in Resources */,
 				461D2FE91DCACA67007116C4 /* 效果.gif in Resources */,
 				4659E7A11DC89E00004B66EF /* 1.png in Resources */,
@@ -250,8 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46B58B911DCC3D2100EE3080 /* ScondViewController.swift in Sources */,
 				4659E7A91DC89E26004B66EF /* YLCycleView.swift in Sources */,
-				46954A411DC97474003123F0 /* ScondViewController.swift in Sources */,
+				46B58B8F1DCC3D0900EE3080 /* YLSinglerowView.swift in Sources */,
 				4659E7A81DC89E26004B66EF /* YLCycleCell.swift in Sources */,
 				4659E78C1DC89DDB004B66EF /* ViewController.swift in Sources */,
 				4659E78A1DC89DDB004B66EF /* AppDelegate.swift in Sources */,

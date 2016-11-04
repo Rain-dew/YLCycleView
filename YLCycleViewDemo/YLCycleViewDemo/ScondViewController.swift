@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ScondViewController: UIViewController,YLCycleViewDelegate {
+class ScondViewController: UIViewController,YLCycleViewDelegate,YLSinglerViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,12 +22,40 @@ class ScondViewController: UIViewController,YLCycleViewDelegate {
         //创建无限轮播
         let cycleView = YLCycleView(frame: CGRect(x: 0, y: 100, width: self.view.bounds.width, height: 150), images: images, titles: titles)
         cycleView.delegate = self;
+        //        cycleView.pageControl.pageIndicatorTintColor = .white
+        //        cycleView.pageControl.currentPageIndicatorTintColor = .darkGray
         view.addSubview(cycleView)
 
+
+        let singlerView = YLSinglerowView(frame: CGRect(x: 50, y: 350, width: 200, height: 30), scrollStyle: .up, roundTime: 5, contentSource: ["这是一条重大新闻","吃货节到了钱包准备好了吗","独家福利来就送!"], tagSource: ["新闻", "吃货节", "福利"])
+        singlerView.delegate = self
+        //更多公开属性自行查找
+        //        singlerView.backColor = .darkGray
+        //        singlerView.contentTextColor = .purple
+        //        singlerView.tagBackgroundColors = [.white,.yellow,.cyan]
+        //        singlerView.tagTextColors = [.red,.blue,.black]
+
+        view.addSubview(singlerView)
+
+
     }
-//MARK: -- YLCycleViewDelegate
+    //MARK: -- YLCycleViewDelegate
     func  clickedCycleView(_ cycleView : YLCycleView, selectedIndex index: Int) {
+
         print("点击了第\(index)页")
     }
 
+
+    //MARK: -- YLSinglerViewDelegate
+
+    func singlerView(_ singlerowView: YLSinglerowView, selectedIndex index: Int) {
+        
+        print("点击了第\(index)个数据")
+        
+    }
+    
+    deinit {
+        print("scond控制器销毁了")
+    }
+    
 }

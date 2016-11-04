@@ -43,7 +43,7 @@ class YLCycleView: UIView {
         collectionView.register(YLCycleCell.self, forCellWithReuseIdentifier: kCellId)
         return collectionView
     }()
-    fileprivate lazy var pageControl : UIPageControl = {[weak self] in
+    lazy var pageControl : UIPageControl = {[weak self] in
 
         let pageControl = UIPageControl(frame: CGRect(x: self!.bounds.width / 2, y: self!.bounds.height - 20, width: self!.bounds.width / 2, height: 20))
         pageControl.pageIndicatorTintColor = .orange
