@@ -28,3 +28,37 @@ Swift无限轮播
 ```
 ##效果图
 ![image](https://github.com/Rain-dew/YLCycleView/blob/master/YLCycleViewDemo/YLCycleViewDemo/%E6%95%88%E6%9E%9C.gif)
+
+#YLSinglerowView
+##如何使用？
+  ```Swift
+  
+        let singlerView = YLSinglerowView(frame: CGRect(x: 50, y: 350, width: 200, height: 30), scrollStyle: .up, roundTime: 5, contentSource: ["这是一条重大新闻","吃货节到了钱包准备好了吗","独家福利来就送!"], tagSource: ["新闻", "吃货节", "福利"])
+        singlerView.delegate = self
+        //更多公开属性自行查找
+        //        singlerView.backColor = .darkGray
+        //        singlerView.contentTextColor = .purple
+        //        singlerView.tagBackgroundColors = [.white,.yellow,.cyan]
+        //        singlerView.tagTextColors = [.red,.blue,.black]
+
+        view.addSubview(singlerView)
+  ```
+###重要提醒：如果你使用了导航，那么你必须在使用控制器中设置滚动偏移，复制下面一行代码到你的控制器中
+```Swift
+ self.automaticallyAdjustsScrollViewInsets = false
+```
+##点击跳转代理
+```Swift
+    //MARK: -- YLSinglerViewDelegate
+    func singlerView(_ singlerowView: YLSinglerowView, selectedIndex index: Int) {
+        print("点击了第\(index)个数据")
+    }
+```
+##效果scrollStyle: .up（上下左右皆可滚动）
+![image](https://github.com/Rain-dew/YLCycleView/blob/master/YLCycleViewDemo/YLCycleViewDemo/up.gif)
+###如果scrollStyle: .left
+![image](https://github.com/Rain-dew/YLCycleView/blob/master/YLCycleViewDemo/YLCycleViewDemo/singer1.gif)
+###如果你希望设置更多属性，例如字体背景颜色等。打开上面代码注释
+![image](https://github.com/Rain-dew/YLCycleView/blob/master/YLCycleViewDemo/YLCycleViewDemo/singer2.gif)
+
+
