@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ScondViewController: UIViewController,YLCycleViewDelegate,YLSinglerViewDelegate {
+class ScondViewController: UIViewController,YLCycleViewDelegate,YLSinglerViewDelegate, YLMenuViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,7 @@ class ScondViewController: UIViewController,YLCycleViewDelegate,YLSinglerViewDel
         view.addSubview(cycleView)
 
 
-        let singlerView = YLSinglerowView(frame: CGRect(x: 50, y: 350, width: 200, height: 30), scrollStyle: .up, roundTime: 5, contentSource: ["这是一条重大新闻","吃货节到了钱包准备好了吗","独家福利来就送!"], tagSource: ["新闻", "吃货节", "福利"])
+        let singlerView = YLSinglerowView(frame: CGRect(x: 50, y: 280, width: 200, height: 30), scrollStyle: .up, roundTime: 5, contentSource: ["这是一条重大新闻","吃货节到了钱包准备好了吗","独家福利来就送!"], tagSource: ["新闻", "吃货节", "福利"])
         singlerView.delegate = self
         //更多公开属性自行查找
         //        singlerView.backColor = .darkGray
@@ -36,6 +36,29 @@ class ScondViewController: UIViewController,YLCycleViewDelegate,YLSinglerViewDel
         //        singlerView.tagTextColors = [.red,.blue,.black]
 
         view.addSubview(singlerView)
+        let menuView = YLMenuView.ylMenuView()
+        menuView.frame = CGRect(x: 10, y: 320, width: self.view.bounds.width - 20, height: 250)
+        menuView.delegate = self
+        menuView.imageArray = ["http://tx.haiqq.com/uploads/allimg/150322/021422Lb-10.jpg",
+                               "http://img.wzfzl.cn/uploads/allimg/150522/co150522214536-15.jpg",
+                               "http://img.wzfzl.cn/uploads/allimg/150119/co150119220K2-18.jpg",
+                               "http://uploads.xuexila.com/allimg/1608/704-160Q5100Z6.jpg",
+                               "http://tx.haiqq.com/uploads/allimg/150326/1P4511163-9.jpg",
+                               "http://tx.haiqq.com/uploads/allimg/150323/15135032M-1.jpg",
+                               "http://img.wzfzl.cn/uploads/allimg/150522/co150522214536-15.jpg",
+                               "http://img.wzfzl.cn/uploads/allimg/150119/co150119220K2-18.jpg",
+                               "http://uploads.xuexila.com/allimg/1608/704-160Q5100Z6.jpg",
+                               "http://tx.haiqq.com/uploads/allimg/150326/1P4511163-9.jpg",
+                               "http://tx.haiqq.com/uploads/allimg/150323/15135032M-1.jpg",
+                               "http://tx.haiqq.com/uploads/allimg/150323/15135032M-1.jpg",
+                               "1"
+        ]
+        menuView.titleArray = ["http", "2345", "345", "uploads", "2345", "allimg", "34545", "uploads", "345", "http", "uploads", "uploads", "uploads"]
+        //                menuView.itemsOfPage = 6
+        //        menuView.imageViewSize = CGSize(width: 60, height: 60)
+        //        menuView.pageControl.pageIndicatorTintColor = .white
+        //        menuView.pageControl.currentPageIndicatorTintColor = .darkGray
+        view.addSubview(menuView)
 
 
     }
@@ -49,11 +72,17 @@ class ScondViewController: UIViewController,YLCycleViewDelegate,YLSinglerViewDel
     //MARK: -- YLSinglerViewDelegate
 
     func singlerView(_ singlerowView: YLSinglerowView, selectedIndex index: Int) {
-        
+
         print("点击了第\(index)个数据")
+
+    }
+
+
+    func menuView(_ menuView : YLMenuView, selectedPage: Int, indexInPage index: Int, indexInAllData : Int) {
+        //为方便数组计算，数据由0起算
+        
         
     }
-    
     deinit {
         print("scond控制器销毁了")
     }

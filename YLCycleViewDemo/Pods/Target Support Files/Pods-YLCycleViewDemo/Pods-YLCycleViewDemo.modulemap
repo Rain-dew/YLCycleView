@@ -1,0 +1,6 @@
+framework module Pods_YLCycleViewDemo {
+  umbrella header "Pods-YLCycleViewDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
