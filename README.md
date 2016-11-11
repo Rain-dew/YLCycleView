@@ -29,6 +29,46 @@ Swift无限轮播
 ##效果图
 ![image](https://github.com/Rain-dew/YLCycleView/blob/master/YLCycleViewDemo/YLCycleViewDemo/%E6%95%88%E6%9E%9C.gif)
 
+# YLMenuView
+##如何使用？
+  ```Swift
+  //类方法创建
+        let menuView = YLMenuView.ylMenuView()
+        menuView.frame = CGRect(x: 10, y: 320, width: self.view.bounds.width - 20, height: 250)
+        menuView.delegate = self
+        //你可以给一个URL也可以给一个本地图片
+        menuView.imageArray = ["http://tx.haiqq.com/uploads/allimg/150322/021422Lb-10.jpg",
+                               "http://img.wzfzl.cn/uploads/allimg/150522/co150522214536-15.jpg",
+                               "http://img.wzfzl.cn/uploads/allimg/150119/co150119220K2-18.jpg",
+                               "http://uploads.xuexila.com/allimg/1608/704-160Q5100Z6.jpg",
+                               "http://tx.haiqq.com/uploads/allimg/150326/1P4511163-9.jpg",
+                               "http://tx.haiqq.com/uploads/allimg/150323/15135032M-1.jpg",
+                               "http://img.wzfzl.cn/uploads/allimg/150522/co150522214536-15.jpg",
+                               "http://img.wzfzl.cn/uploads/allimg/150119/co150119220K2-18.jpg",
+                               "http://uploads.xuexila.com/allimg/1608/704-160Q5100Z6.jpg",
+                               "http://tx.haiqq.com/uploads/allimg/150326/1P4511163-9.jpg",
+                               "http://tx.haiqq.com/uploads/allimg/150323/15135032M-1.jpg",
+                               "http://tx.haiqq.com/uploads/allimg/150323/15135032M-1.jpg",
+                               "1"
+        ]
+        menuView.titleArray = ["http", "2345", "345", "uploads", "2345", "allimg", "34545", "uploads", "345", "http", "uploads", "uploads", "uploads"]
+        //                menuView.itemsOfPage = 6
+        //        menuView.imageViewSize = CGSize(width: 60, height: 60)
+        //        menuView.pageControl.pageIndicatorTintColor = .white
+        //        menuView.pageControl.currentPageIndicatorTintColor = .darkGray
+        view.addSubview(menuView)
+
+  ```
+###点击回调的代理（记得设置代理，并且遵守这个代理！）
+  ```Swift
+  
+func menuView(_ menuView : YLMenuView, selectedPage: Int, indexInPage index: Int, indexInAllData : Int) {
+        //为方便数组计算，数据由0起算
+}
+  ```
+##效果
+![image](https://github.com/Rain-dew/YLCycleView/blob/master/YLCycleViewDemo/YLCycleViewDemo/MenuView.gif)
+
 #YLSinglerowView
 ##如何使用？
   ```Swift
