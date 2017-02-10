@@ -18,7 +18,7 @@ import UIKit
 import Kingfisher
 private let kCellId = "kCellId"
 
-//代理
+//每个图片点击响应的代理
 protocol YLCycleViewDelegate : class {
     func clickedCycleView(_ cycleView : YLCycleView, selectedIndex index: Int)
 }
@@ -91,12 +91,16 @@ extension YLCycleView {
     fileprivate func setupUI() {
 
         addSubview(collectionView)
-        addSubview(pageControl)
         //添加定时器。先移除再添加
         collectionView.reloadData()
         removeCycleTimer()
-        addCycleTimer()
-
+        if (images?.count)! > 1 {//如果只有1个图片就不再滚动
+            self.collectionView.isScrollEnabled = true
+            addCycleTimer()
+            addSubview(pageControl)
+        }else {
+            self.collectionView.isScrollEnabled = false
+        }
         //滚动到该位置（让用户最开始就可以向左滚动）
         collectionView.setContentOffset(CGPoint(x: collectionView.bounds.width * CGFloat((images?.count)!) * 10, y: 0), animated: true)
 
