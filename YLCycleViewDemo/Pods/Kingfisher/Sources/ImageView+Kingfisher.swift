@@ -4,7 +4,7 @@
 //
 //  Created by Wei Wang on 15/4/6.
 //
-//  Copyright (c) 2016 Wei Wang <onevcat@gmail.com>
+//  Copyright (c) 2017 Wei Wang <onevcat@gmail.com>
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -49,6 +49,9 @@ extension Kingfisher where Base: ImageView {
      
      - note: Both the `progressBlock` and `completionHandler` will be invoked in main thread.
      The `CallbackDispatchQueue` specified in `optionsInfo` will not be used in callbacks of this method.
+     
+     If `resource` is `nil`, the `placeholder` image will be set and
+     `completionHandler` will be called with both `error` and `image` being `nil`.
      */
     @discardableResult
     public func setImage(with resource: Resource?,
@@ -57,27 +60,35 @@ extension Kingfisher where Base: ImageView {
                          progressBlock: DownloadProgressBlock? = nil,
                          completionHandler: CompletionHandler? = nil) -> RetrieveImageTask
     {
-        base.image = placeholder
-        
         guard let resource = resource else {
+            base.image = placeholder
+            setWebURL(nil)
             completionHandler?(nil, nil, .none, nil)
             return .empty
         }
         
+        var options = KingfisherManager.shared.defaultOptions + (options ?? KingfisherEmptyOptionsInfo)
+        
+        if !options.keepCurrentImageWhileLoading {
+            base.image = placeholder
+        }
+
         let maybeIndicator = indicator
         maybeIndicator?.startAnimatingView()
         
         setWebURL(resource.downloadURL)
-        
-        var options = options ?? KingfisherEmptyOptionsInfo
-        if shouldPreloadAllGIF() {
-            options.append(.preloadAllGIFData)
+
+        if base.shouldPreloadAllAnimation() {
+            options.append(.preloadAllAnimationData)
         }
         
         let task = KingfisherManager.shared.retrieveImage(
             with: resource,
             options: options,
             progressBlock: { receivedSize, totalSize in
+                guard resource.downloadURL == self.webURL else {
+                    return
+                }
                 if let progressBlock = progressBlock {
                     progressBlock(receivedSize, totalSize)
                 }
@@ -85,8 +96,10 @@ extension Kingfisher where Base: ImageView {
             completionHandler: {[weak base] image, error, cacheType, imageURL in
                 DispatchQueue.main.safeAsync {
                     guard let strongBase = base, imageURL == self.webURL else {
+                        completionHandler?(image, error, cacheType, imageURL)
                         return
                     }
+                    
                     self.setImageTask(nil)
                     guard let image = image else {
                         maybeIndicator?.stopAnimatingView()
@@ -94,7 +107,7 @@ extension Kingfisher where Base: ImageView {
                         return
                     }
                     
-                    guard let transitionItem = options.firstMatchIgnoringAssociatedValue(.transition(.none)),
+                    guard let transitionItem = options.lastMatchIgnoringAssociatedValue(.transition(.none)),
                         case .transition(let transition) = transitionItem, ( options.forceTransition || cacheType == .none) else
                     {
                         maybeIndicator?.stopAnimatingView()
@@ -132,11 +145,7 @@ extension Kingfisher where Base: ImageView {
      Nothing will happen if the downloading has already finished.
      */
     public func cancelDownloadTask() {
-        imageTask?.downloadTask?.cancel()
-    }
-    
-    func shouldPreloadAllGIF() -> Bool {
-        return true
+        imageTask?.cancel()
     }
 }
 
@@ -152,7 +161,7 @@ extension Kingfisher where Base: ImageView {
         return objc_getAssociatedObject(base, &lastURLKey) as? URL
     }
     
-    fileprivate func setWebURL(_ url: URL) {
+    fileprivate func setWebURL(_ url: URL?) {
         objc_setAssociatedObject(base, &lastURLKey, url, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
     }
     
@@ -281,6 +290,9 @@ extension ImageView {
     fileprivate func kf_setImageTask(_ task: RetrieveImageTask?) { kf.setImageTask(task) }
     @available(*, deprecated, message: "Extensions directly on image views are deprecated.", renamed: "kf.setWebURL")
     fileprivate func kf_setWebURL(_ url: URL) { kf.setWebURL(url) }
-    @available(*, deprecated, message: "Extensions directly on image views are deprecated.", renamed: "kf.shouldPreloadAllGIF")
-    func shouldPreloadAllGIF() -> Bool { return kf.shouldPreloadAllGIF() }
+
+    func shouldPreloadAllAnimation() -> Bool { return true }
+
+    @available(*, deprecated, renamed: "shouldPreloadAllAnimation")
+    func shouldPreloadAllGIF() -> Bool { return true }
 }
