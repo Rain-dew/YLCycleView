@@ -196,7 +196,7 @@
 				TargetAttributes = {
 					4659E7851DC89DDB004B66EF = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = EFQPYM2JJ7;
+						DevelopmentTeam = 76U7MFBQ83;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
@@ -430,8 +430,9 @@
 			baseConfigurationReference = 274AF85EFDE6442DDE306756 /* Pods-YLCycleViewDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = EFQPYM2JJ7;
+				DEVELOPMENT_TEAM = 76U7MFBQ83;
 				INFOPLIST_FILE = YLCycleViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Yulu-Zhang.YLCycleViewDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -444,8 +445,9 @@
 			baseConfigurationReference = BFE26403276CAC017579FE68 /* Pods-YLCycleViewDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = EFQPYM2JJ7;
+				DEVELOPMENT_TEAM = 76U7MFBQ83;
 				INFOPLIST_FILE = YLCycleViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Yulu-Zhang.YLCycleViewDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
