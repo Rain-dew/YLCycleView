@@ -169,9 +169,13 @@ extension YLCycleView {
     fileprivate func addCycleTimer() {
 //        cycleTimer = Timer(timeInterval: 3.0, target: self, selector: #selector(scrollToNextPage), userInfo: nil, repeats: true)
         weak var weakSelf = self//解决循环引用
-        cycleTimer = Timer(timeInterval: 3.0, repeats: true, block: {(timer) in
-            weakSelf!.scrollToNextPage()
-        })
+        if #available(iOS 10.0, *) {
+            cycleTimer = Timer(timeInterval: 3.0, repeats: true, block: {(timer) in
+                weakSelf!.scrollToNextPage()
+            })
+        } else {
+            cycleTimer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.scrollToNextPage), userInfo: nil, repeats: true)
+        }
         RunLoop.main.add(cycleTimer!, forMode: .commonModes)
     }
     fileprivate func removeCycleTimer() {
