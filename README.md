@@ -26,7 +26,8 @@ Swift无限轮播
 ```Swift
  self.automaticallyAdjustsScrollViewInsets = false
 ```
-##效果图
+## 效果图
+
 ![image](https://github.com/Rain-dew/YLCycleView/blob/master/YLCycleViewDemo/YLCycleViewDemo/%E6%95%88%E6%9E%9C.gif)
 
 # YLMenuView
