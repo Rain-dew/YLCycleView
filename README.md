@@ -22,6 +22,16 @@ Swift无限轮播
   ```Swift
         let cycleView = YLCycleView(frame: CGRect(x: 0, y: 100, width: self.view.bounds.width, height: 150), images: images)
   ```
+### 想要更新数据？
+ ```Swift
+  // MARK: -- reload
+    func reload() {
+        cycleView.titles = []//可以为空。可以为nil-->此时隐藏标题
+        cycleView.images = ["1", "2", "3"]//不要为空,否则没图片了
+        //请务必刷新！
+        cycleView.reloadData()
+    }
+```
 ## 重要提醒：如果你使用了导航，那么你必须在使用控制器中设置滚动偏移，复制下面一行代码到你的控制器中
 ```Swift
  self.automaticallyAdjustsScrollViewInsets = false
