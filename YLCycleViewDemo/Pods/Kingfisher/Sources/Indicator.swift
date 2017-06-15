@@ -4,7 +4,7 @@
 //
 //  Created by João D. Moreira on 30/08/16.
 //
-//  Copyright (c) 2016 Wei Wang <onevcat@gmail.com>
+//  Copyright (c) 2017 Wei Wang <onevcat@gmail.com>
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -145,9 +145,9 @@ struct ImageIndicator: Indicator {
     init?(imageData data: Data, processor: ImageProcessor = DefaultImageProcessor.default, options: KingfisherOptionsInfo = KingfisherEmptyOptionsInfo) {
 
         var options = options
-        // Use normal image view to show gif, so we need to preload all gif data.
-        if !options.preloadAllGIFData {
-            options.append(.preloadAllGIFData)
+        // Use normal image view to show animations, so we need to preload all animation data.
+        if !options.preloadAllAnimationData {
+            options.append(.preloadAllAnimationData)
         }
         
         guard let image = processor.process(item: .data(data), options: options) else {
