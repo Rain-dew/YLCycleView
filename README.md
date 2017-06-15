@@ -18,7 +18,7 @@ Swift无限轮播
         print("点击了第\(index)页")
     }
   ```
-### 大多数而言，这个滚动视图都是有一个<font color=#0099ff size=14 face="黑体">title</font>的。当然如果你不需要直接这样创建视图:
+### 大多数而言，这个滚动视图都是有一个<font color=#ea00aa size=14 face="黑体">title</font>的。当然如果你不需要直接这样创建视图:
   ```Swift
         let cycleView = YLCycleView(frame: CGRect(x: 0, y: 100, width: self.view.bounds.width, height: 150), images: images)
   ```
