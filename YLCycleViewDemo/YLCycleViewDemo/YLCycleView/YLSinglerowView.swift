@@ -2,8 +2,8 @@
 //  YLSinglerowView.swift
 //  YLCycleViewDemo
 //
-//  Created by shuogao on 2016/11/3.
-//  Copyright © 2016年 Yulu Zhang. All rights reserved.
+//  Created by Raindew on 2016/11/3.
+//  Copyright © 2016年 Raindew. All rights reserved.
 //
 
 import UIKit
@@ -160,7 +160,6 @@ extension YLSinglerowView : UICollectionViewDataSource {
 extension YLSinglerowView : UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("点击了第\(indexPath.row % contentSource!.count)个数据")
         self.delegate?.singlerView(self, selectedIndex: indexPath.row % contentSource!.count)
     }
 

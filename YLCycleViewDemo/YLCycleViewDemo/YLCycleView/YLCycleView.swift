@@ -10,7 +10,7 @@
 //   \_/   \__,_| |_|__,/ \__,_|
 //  YLCycleView.swift
 //  YLCycleView
-//  Created by shuogao on 2016/11/1.
+//  Created by Raindew on 2016/11/1.
 //  Copyright © 2016年 Raindew. All rights reserved.
 //
 
@@ -26,8 +26,8 @@ protocol YLCycleViewDelegate : class {
 class YLCycleView: UIView {
 
 //MARK: -- 自定义属性
-    fileprivate var titles: [String]?
-    fileprivate var images: [String]?
+    var titles: [String]?
+    var images: [String]!
     fileprivate var cycleTimer : Timer?
     weak var delegate : YLCycleViewDelegate?
 
@@ -40,6 +40,7 @@ class YLCycleView: UIView {
         collectionView.bounces = false
         collectionView.dataSource = self
         collectionView.delegate = self
+        collectionView.backgroundColor = .white
         collectionView.register(YLCycleCell.self, forCellWithReuseIdentifier: kCellId)
         return collectionView
     }()
@@ -67,7 +68,11 @@ class YLCycleView: UIView {
         //设置该空间不随着父控件的拉伸而拉伸
         autoresizingMask = UIViewAutoresizing()
     }
-
+//MARK: -- 刷新数据
+    func reloadData() {
+        pageControl.numberOfPages = self.images?.count ?? 0
+        collectionView.reloadData()
+    }
 //MARK: -- 构造函数
     init(frame: CGRect, images: [String], titles : [String] = []) {
 
@@ -121,11 +126,20 @@ extension YLCycleView : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         //创建cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCellId, for: indexPath) as! YLCycleCell
-        if (titles?.count)! > 0 {
-
-            cell.titleLabel.text = titles?[indexPath.row % titles!.count]
+        
+        if titles != nil {
+            if (titles?.count)! > 0 {
+                cell.bottomView.isHidden = false
+                cell.titleLabel.text = titles?[indexPath.row % titles!.count]
+            }else {
+                cell.titleLabel.text = ""
+                cell.bottomView.isHidden = true
+            }
+        }else {
+            cell.titleLabel.text = ""
+            cell.bottomView.isHidden = true
         }
-
+       
         var header : String?
         if images![indexPath.row % images!.count].characters.count >= 4 {
             header = (images![indexPath.row % images!.count] as NSString).substring(to: 4)
@@ -148,7 +162,8 @@ extension YLCycleView : UICollectionViewDataSource {
 //MARK: -- UICollectionViewDelegate
 extension YLCycleView : UICollectionViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-
+        guard images != nil else { return }
+        guard images.count != 0 else { return }
         let offsetX = scrollView.contentOffset.x + scrollView.bounds.width * 0.5
         pageControl.currentPage = Int(offsetX / scrollView.bounds.width) % (images?.count ?? 0)
     }
@@ -165,9 +180,9 @@ extension YLCycleView : UICollectionViewDelegate {
 
 //MARK: -- 时间控制器
 extension YLCycleView {
-
-    fileprivate func addCycleTimer() {
-//        cycleTimer = Timer(timeInterval: 3.0, target: self, selector: #selector(scrollToNextPage), userInfo: nil, repeats: true)
+    
+    func addCycleTimer() {
+        
         weak var weakSelf = self//解决循环引用
         if #available(iOS 10.0, *) {
             cycleTimer = Timer(timeInterval: 3.0, repeats: true, block: {(timer) in
@@ -178,7 +193,7 @@ extension YLCycleView {
         }
         RunLoop.main.add(cycleTimer!, forMode: .commonModes)
     }
-    fileprivate func removeCycleTimer() {
+    func removeCycleTimer() {
         cycleTimer?.invalidate()//移除
         cycleTimer = nil
     }
@@ -195,6 +210,8 @@ extension YLCycleView {
 
     @objc fileprivate func tapGes(tap: UITapGestureRecognizer) {
         guard (tap.view as? YLCycleView) != nil else { return }
+        guard images != nil else { return }
+        guard images.count != 0 else { return }
         if (delegate != nil) {
             delegate?.clickedCycleView(self, selectedIndex: pageControl.currentPage)
         }

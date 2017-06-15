@@ -1,9 +1,9 @@
 //
 //  YLMenuView.swift
-//  斗鱼
+//  
 //
-//  Created by shuogao on 2016/11/8.
-//  Copyright © 2016年 Yulu Zhang. All rights reserved.
+//  Created by Raindew on 2016/11/8.
+//  Copyright © 2016年 Raindew. All rights reserved.
 //
 
 import UIKit
